@@ -13,6 +13,7 @@ func main() {
 	// from the disk again. This makes serving HTML pages very fast.
 	router.LoadHTMLGlob("templates/*")
 	router.GET("/", showIndexPage)
+	router.GET("/article/view/:article_id", getArticle)
 
 	// Define the route for the index page and display the index.html template
 	// To start with, we'll use an inline route handler. Later on, we'll create
